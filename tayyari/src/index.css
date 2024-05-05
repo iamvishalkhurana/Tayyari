@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.question-container {
+    transition: transform 0.3s ease;
+    /* Adjust duration as needed */
+}
+
+.question-container.left {
+    transform: translateX(-100%);
+}
+
+.question-container.right {
+    transform: translateX(100%);
+}
+
+.solution-container {
+    transition: right 1s ease-in-out;
+    /* Adjust duration and timing function as needed */
+}
