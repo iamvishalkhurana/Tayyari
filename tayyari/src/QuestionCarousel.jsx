@@ -152,7 +152,14 @@ function QuestionCarousel({ questions }) {
               Check solution
             </button>
             <div className="border-[1px]  w-fit p-2 rounded-lg flex gap-2 items-center bg-[#257FFF] text-white duration-300  cursor-pointer hover:scale-[1.05] justify-center text-sm md:text-lg">
-              <button>Submit answer</button>
+              <button
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  setShowSolution(true);
+                }}
+              >
+                Submit answer
+              </button>
             </div>
           </div>
           <div

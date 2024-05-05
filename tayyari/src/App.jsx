@@ -33,7 +33,9 @@ function App() {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/v1/ques");
+        const response = await axios.get(
+          "https://tayyari-1ir1.onrender.com/api/v1/ques"
+        );
         dispatch({ type: "FETCH_SUCCESS", payload: response.data });
       } catch (error) {
         dispatch({ type: "FETCH_ERROR", payload: "Error fetching data" });
@@ -46,7 +48,7 @@ function App() {
   return (
     <>
       {state.loading ? (
-        <p>Loading...</p>
+        <p>Backend is Hosted on FREE Resources , Please Wait :). Loading...</p>
       ) : state.error ? (
         <p>{state.error}</p>
       ) : (
